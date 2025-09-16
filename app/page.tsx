@@ -5,7 +5,17 @@ import { SpaceBackground } from "@/components/space-background"
 import { TimelineCard } from "@/components/timeline-card"
 import { TimelineLine } from "@/components/timeline-line"
 
-const sponsorData = [
+// Define props type for safety
+type Sponsor = {
+  name: string
+  category: string
+  title: string
+  description: string
+  image: string
+  side: "left" | "right"
+}
+
+const sponsorData: Sponsor[] = [
   {
     name: "SpaceX",
     category: "AEROSPACE",
@@ -85,7 +95,7 @@ export default function SpaceSponsorTimeline() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen transparent relative overflow-hidden">
       <SpaceBackground cursorPosition={cursorPosition} />
 
       {/* Custom cursor */}
@@ -122,7 +132,14 @@ export default function SpaceSponsorTimeline() {
 
         <div className="space-y-32">
           {sponsorData.map((item, index) => (
-            <div key={index} ref={(el) => (cardRefs.current[index] = el)} data-index={index} className="relative">
+            <div
+              key={index}
+              ref={(el) => {
+                cardRefs.current[index] = el
+              }}
+              data-index={index}
+              className="relative"
+            >
               <TimelineCard {...item} index={index} isVisible={visibleCards.includes(index)} />
             </div>
           ))}
