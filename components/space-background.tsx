@@ -8,41 +8,54 @@ type Props = {
 
 export function SpaceBackground({ cursorPosition }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const starsRef = useRef<
+    { x: number; y: number; radius: number; speed: number }[]
+  >([])
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
 
     const ctx = canvas.getContext("2d")
-    if (!ctx) return // ✅ extra null check
+    if (!ctx) return
 
-    let width = window.innerWidth
-    let height = window.innerHeight
-    canvas.width = width
-    canvas.height = height
-
-    // Resize listener
-    const handleResize = () => {
-      width = window.innerWidth
-      height = window.innerHeight
-      canvas.width = width
-      canvas.height = height
+    function generateStars(width: number, height: number) {
+      return Array.from({ length: 200 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.3 + 0.1,
+      }))
     }
-    window.addEventListener("resize", handleResize)
 
-    // Star field
-    const stars = Array.from({ length: 200 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      radius: Math.random() * 1.5,
-      speed: Math.random() * 0.3 + 0.1,
-    }))
+    // Responsive resize handler
+    function resizeCanvas() {
+      const canvas = canvasRef.current
+      if (!canvas) return
+      const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      const dpr = window.devicePixelRatio || 1
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+      canvas.style.width = `${window.innerWidth}px`
+      canvas.style.height = `${window.innerHeight}px`
+      ctx.setTransform(1, 0, 0, 1, 0, 0)
+      ctx.scale(dpr, dpr)
+      starsRef.current = generateStars(window.innerWidth, window.innerHeight)
+    }
+
+    resizeCanvas()
+    window.addEventListener("resize", resizeCanvas)
 
     let frameId: number
 
     function animate() {
-      if (!ctx) return // ✅ safeguard
-
+      const canvas = canvasRef.current
+      if (!canvas) return
+      const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      const width = window.innerWidth
+      const height = window.innerHeight
       ctx.clearRect(0, 0, width, height)
 
       // Background gradient (dark matter feel)
@@ -54,14 +67,14 @@ export function SpaceBackground({ cursorPosition }: Props) {
         height / 2,
         Math.max(width, height) / 1.2
       )
-      gradient.addColorStop(0, "#0a0a0f") // deep dark center
-      gradient.addColorStop(1, "#000000") // black edges
+      gradient.addColorStop(0, "#0a0a0f")
+      gradient.addColorStop(1, "#000000")
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, width, height)
 
       // Stars
       ctx.fillStyle = "#ffffff"
-      stars.forEach((star) => {
+      starsRef.current.forEach((star) => {
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
         ctx.fill()
@@ -75,11 +88,18 @@ export function SpaceBackground({ cursorPosition }: Props) {
       // Eclipse effect (dark circle over glowing ring)
       const centerX = width / 2
       const centerY = height / 2
-      const radius = 150
+      const radius = Math.max(80, Math.min(width, height) / 6)
 
       // Glow ring
-      const glow = ctx.createRadialGradient(centerX, centerY, radius * 0.8, centerX, centerY, radius * 1.2)
-      glow.addColorStop(0, "rgba(200,0,50,0.2)") // reddish glow
+      const glow = ctx.createRadialGradient(
+        centerX,
+        centerY,
+        radius * 0.8,
+        centerX,
+        centerY,
+        radius * 1.2
+      )
+      glow.addColorStop(0, "rgba(200,0,50,0.2)")
       glow.addColorStop(1, "rgba(0,0,0,0)")
       ctx.fillStyle = glow
       ctx.beginPath()
@@ -99,7 +119,7 @@ export function SpaceBackground({ cursorPosition }: Props) {
 
     return () => {
       cancelAnimationFrame(frameId)
-      window.removeEventListener("resize", handleResize)
+      window.removeEventListener("resize", resizeCanvas)
     }
   }, [])
 

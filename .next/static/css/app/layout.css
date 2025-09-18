@@ -67,6 +67,8 @@ font-weight: 100 900;
     --tracking-widest: 0.1em;
     --leading-relaxed: 1.625;
     --radius-xs: 0.125rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -563,6 +565,9 @@ font-weight: 100 900;
   .h-\[1\.15rem\] {
     height: 1.15rem;
   }
+  .h-\[200px\] {
+    height: 200px;
+  }
   .h-\[calc\(100\%-1px\)\] {
     height: calc(100% - 1px);
   }
@@ -664,6 +669,9 @@ font-weight: 100 900;
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-\[320px\] {
+    width: 320px;
   }
   .w-auto {
     width: auto;
@@ -850,6 +858,9 @@ font-weight: 100 900;
   .auto-rows-min {
     grid-auto-rows: min-content;
   }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .grid-cols-\[0_1fr\] {
     grid-template-columns: 0 1fr;
   }
@@ -916,12 +927,8 @@ font-weight: 100 900;
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .space-y-32 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 32) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 32) * calc(1 - var(--tw-space-y-reverse)));
-    }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .space-x-4 {
     :where(& > :not(:last-child)) {
@@ -953,6 +960,12 @@ font-weight: 100 900;
   }
   .overflow-y-auto {
     overflow-y: auto;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
   }
   .rounded-\[2px\] {
     border-radius: 2px;
@@ -1186,6 +1199,12 @@ font-weight: 100 900;
   .bg-transparent {
     background-color: transparent;
   }
+  .bg-white\/5 {
+    background-color: color-mix(in srgb, #fff 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+    }
+  }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -1203,6 +1222,9 @@ font-weight: 100 900;
   }
   .fill-primary {
     fill: var(--primary);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
@@ -3684,6 +3706,11 @@ font-weight: 100 900;
       max-width: 420px;
     }
   }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -4671,11 +4698,6 @@ font-weight: 100 900;
   syntax: "*";
   inherits: false;
 }
-@property --tw-space-y-reverse {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
@@ -4934,7 +4956,6 @@ font-weight: 100 900;
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
