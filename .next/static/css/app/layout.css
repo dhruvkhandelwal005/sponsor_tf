@@ -1546,6 +1546,9 @@ font-weight: 100 900;
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-\[var\(--accent-2\)\] {
+    color: var(--accent-2);
+  }
   .text-accent-foreground {
     color: var(--accent-foreground);
   }

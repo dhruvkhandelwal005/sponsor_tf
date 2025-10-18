@@ -235,26 +235,38 @@ export default function SpaceSponsorCards() {
           style={{ backdropFilter: "blur(6px)", transition: "transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.45s cubic-bezier(.2,.9,.2,1)" }}
         >
           <span className="absolute -inset-px rounded-3xl bg-gradient-to-r from-pink-500 via-violet-400 to-cyan-400 opacity-20 blur-xl group-hover:opacity-40 transition-opacity pointer-events-none" />
-          <h2 className="relative text-3xl font-semibold mb-4">History of TantraFiesta</h2>
+          <h2 className="relative text-3xl font-bold mb-4">History of TantraFiesta</h2>
           <div className="relative space-y-4 text-sm md:text-base leading-relaxed">
-            <p>The Evolution of TantraFiesta: A Journey of Innovation</p>
-            <p>TantraFiesta stands as the flagship annual technical festival of the Indian Institute of Information Technology, Nagpur (IIIT Nagpur). Since its inception in 2018, it has evolved from a modest gathering into a premier national-level event, celebrated for its commitment to fostering innovation, creativity, and technological advancement.</p>
-            <p><strong>2018: Humble Beginnings</strong></p>
-            <p>In 2018, TantraFiesta embarked on its journey with a vision to provide a platform for students to showcase their technical prowess and creativity. The inaugural edition laid a strong foundation, setting the stage for future growth and success.</p>
-            <p><strong>2019: Conquering the Space</strong></p>
-            <p>The 2019 edition, themed "Conquering the Space," drew inspiration from India's space endeavors, particularly Chandrayaan 2. This year marked a significant milestone, with over 10,000 participants engaging in various competitions and workshops, reflecting the growing reach and impact of the festival (nagpurtoday.in).</p>
-            <p><strong>2020: Navigating Challenges</strong></p>
+            <p className="text-primary font-semibold">🌀 The Evolution of TantraFiesta: A Journey of Innovation</p>
+            <p>
+              TantraFiesta stands as the flagship annual technical festival of the <span className="font-semibold text-muted-foreground">Indian Institute of Information Technology, Nagpur (IIIT Nagpur)</span>. Since its inception in <span className="font-semibold text-[var(--accent-2)]">2018</span>, it has evolved from a modest gathering into a <span className="text-primary font-semibold">premier national-level event</span>, celebrated for its commitment to fostering innovation, creativity, and technological advancement.
+            </p>
+
+            <p><strong className="text-primary">🌱 2018: Humble Beginnings</strong></p>
+            <p>In 2018, TantraFiesta embarked on its journey with a vision to provide a platform for students to showcase their <span className="font-semibold">technical prowess</span> and creativity. The inaugural edition laid a strong foundation, setting the stage for future growth and success.</p>
+
+            <p><strong className="text-primary">🚀 2019: Conquering the Space</strong></p>
+            <p>The 2019 edition, themed "<span className="font-semibold">Conquering the Space</span>," drew inspiration from India's space endeavors, particularly Chandrayaan 2. This year marked a significant milestone, with over <span className="font-semibold text-muted-foreground">10,000 participants</span> engaging in various competitions and workshops, reflecting the growing reach and impact of the festival (nagpurtoday.in).</p>
+
+            <p><strong className="text-primary">🌿 2020: Navigating Challenges</strong></p>
             <p>Despite the global challenges posed by the COVID-19 pandemic, TantraFiesta adapted by hosting virtual events, ensuring the continuity of innovation and learning. The festival maintained its commitment to providing a platform for students to explore and expand their technical skills.</p>
-            <p><strong>2021: Life in Future</strong></p>
-            <p>The 2021 theme, "Life in Future," introduced a dedicated AI/ML track, allowing participants to delve into the next frontier of intelligence through workshops and tech challenges. This edition highlighted the festival's adaptability and forward-thinking approach.</p>
-            <p><strong>2022: Greener Tomorrow</strong></p>
-            <p>With "Greener Tomorrow," TantraFiesta returned to campus life, focusing on sustainability and the integration of green technologies. The festival emphasized the importance of environmentally conscious innovation, bringing together students to collaborate on solutions for a sustainable future.</p>
-            <p><strong>2023: Genesis Unleashed</strong></p>
-            <p>The 2023 edition, themed "Genesis Unleashed," embraced the digital realm with a fully virtual format. AI-powered challenges and interactive workshops connected innovators from across the globe, showcasing the festival's ability to transcend geographical boundaries and foster a global community of technologists.</p>
-            <p><strong>2024: Digital Big Bang</strong></p>
-            <p>TantraFiesta 2024 marked a significant milestone with its first dedicated website launch, themed "Digital Big Bang." This edition brought the fest closer to every innovator nationwide, expanding its reach and accessibility, and solidifying its position in the digital era.</p>
-            <p><strong>2025: Dark Matter Eclipse</strong></p>
-            <p>The 2025 edition, themed "Dark Matter Eclipse: Exploring the Unexplored," delved deep into the mysteries of the cosmos. This year marked a rebirth of innovation, where creativity met the unseen power of technology, pushing boundaries to discover what lies beyond the visible spectrum.</p>
+
+            <p><strong className="text-primary">🌐 2021: Life in Future</strong></p>
+            <p>The 2021 theme, "<span className="font-semibold">Life in Future</span>," introduced a dedicated <span className="text-[var(--accent-2)] font-semibold">AI/ML track</span>, allowing participants to delve into the next frontier of intelligence through workshops and tech challenges.</p>
+
+            <p><strong className="text-primary">🌍 2022: Greener Tomorrow</strong></p>
+            <p>With "Greener Tomorrow," TantraFiesta returned to campus life, focusing on <span className="font-semibold">sustainability</span> and the integration of green technologies.</p>
+
+            <p><strong className="text-primary">💻 2023: Genesis Unleashed</strong></p>
+            <p>The 2023 edition, themed "Genesis Unleashed," embraced the digital realm with a fully virtual format and AI-powered challenges that connected innovators globally.</p>
+
+            <p><strong className="text-primary">🌌 2024: Digital Big Bang</strong></p>
+            <p>TantraFiesta 2024 marked a significant milestone with its first dedicated website launch, themed "Digital Big Bang," expanding reach and accessibility nationwide.</p>
+
+            <p><strong className="text-primary">🌠 2025: Dark Matter Eclipse</strong></p>
+            <p>The 2025 edition, themed "<span className="font-semibold">Dark Matter Eclipse: Exploring the Unexplored</span>," delved deep into the mysteries of the cosmos and pushed boundaries of creativity and technology.</p>
+
+            <p>TantraFiesta continues to evolve, embracing new themes and challenges each year, while staying true to its mission of <span className="font-semibold text-primary">igniting curiosity</span> and fostering innovation.</p>
           </div>
         </article>
       </section>
