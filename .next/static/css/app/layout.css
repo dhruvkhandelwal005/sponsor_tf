@@ -312,6 +312,9 @@ font-weight: 100 900;
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
+  .top-6 {
+    top: calc(var(--spacing) * 6);
+  }
   .top-\[1px\] {
     top: 1px;
   }
@@ -341,6 +344,9 @@ font-weight: 100 900;
   }
   .right-4 {
     right: calc(var(--spacing) * 4);
+  }
+  .right-6 {
+    right: calc(var(--spacing) * 6);
   }
   .-bottom-12 {
     bottom: calc(var(--spacing) * -12);
@@ -380,6 +386,9 @@ font-weight: 100 900;
   }
   .z-20 {
     z-index: 20;
+  }
+  .z-40 {
+    z-index: 40;
   }
   .z-50 {
     z-index: 50;
@@ -1231,6 +1240,12 @@ font-weight: 100 900;
       background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
     }
   }
+  .bg-white\/6 {
+    background-color: color-mix(in srgb, #fff 6%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 6%, transparent);
+    }
+  }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -1745,6 +1760,10 @@ font-weight: 100 900;
     --tw-duration: 1000ms;
     transition-duration: 1000ms;
   }
+  .ease-\[cubic-bezier\(\.2\,\.9\,\.2\,1\)\] {
+    --tw-ease: cubic-bezier(.2,.9,.2,1);
+    transition-timing-function: cubic-bezier(.2,.9,.2,1);
+  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
@@ -2243,6 +2262,16 @@ font-weight: 100 900;
       }
     }
   }
+  .hover\:scale-110 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:bg-accent {
     &:hover {
       @media (hover: hover) {
@@ -2308,6 +2337,16 @@ font-weight: 100 900;
     &:hover {
       @media (hover: hover) {
         background-color: var(--sidebar-accent);
+      }
+    }
+  }
+  .hover\:bg-white\/10 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, #fff 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+        }
       }
     }
   }

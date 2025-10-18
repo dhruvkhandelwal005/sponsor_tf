@@ -110,6 +110,37 @@ export default function SpaceSponsorCards() {
         }}
       />
 
+      {/* Top-right social icons */}
+      <div className="absolute top-6 right-6 z-40 flex items-center gap-3">
+        <a href="#" aria-label="Instagram" className="p-2 rounded-full bg-white/6 hover:bg-white/10 transition-transform duration-300 ease-[cubic-bezier(.2,.9,.2,1)] transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-white">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="3.2" />
+            <circle cx="17.5" cy="6.5" r="0.5" />
+          </svg>
+        </a>
+
+        <a href="#" aria-label="YouTube" className="p-2 rounded-full bg-white/6 hover:bg-white/10 transition-transform duration-300 ease-[cubic-bezier(.2,.9,.2,1)] transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-white">
+            <rect x="2.5" y="6.5" width="19" height="11" rx="2.5" />
+            <path d="M10 9l5 3-5 3z" />
+          </svg>
+        </a>
+
+        <a href="#" aria-label="GitHub" className="p-2 rounded-full bg-white/6 hover:bg-white/10 transition-transform duration-300 ease-[cubic-bezier(.2,.9,.2,1)] transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-white">
+            <path d="M12 2a10 10 0 0 0-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.33-3.36-1.33-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.25.1-2.6 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.35.2 2.35.1 2.6.64.7 1.03 1.6 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
+          </svg>
+        </a>
+
+        <a href="#" aria-label="LinkedIn" className="p-2 rounded-full bg-white/6 hover:bg-white/10 transition-transform duration-300 ease-[cubic-bezier(.2,.9,.2,1)] transform hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-white">
+            <rect x="2" y="2" width="20" height="20" rx="2" />
+            <path d="M7 11v7M7 7v2M12 11v7M12 7a2 2 0 0 1 2 2v0M17 11v7" />
+          </svg>
+        </a>
+      </div>
+
       {/* Header */}
       <header className="relative z-10 pt-20 pb-16 text-center">
         <div className="flex items-center justify-center mb-6">
@@ -223,8 +254,7 @@ export default function SpaceSponsorCards() {
             <p><strong>2024: Digital Big Bang</strong></p>
             <p>TantraFiesta 2024 marked a significant milestone with its first dedicated website launch, themed "Digital Big Bang." This edition brought the fest closer to every innovator nationwide, expanding its reach and accessibility, and solidifying its position in the digital era.</p>
             <p><strong>2025: Dark Matter Eclipse</strong></p>
-            <p>The 2025 edition, themed "Dark Matter Eclipse: Exploring the Unexplored," delved deep into the mysteries of the cosmos. This year marked a rebirth of innovation, where creativity met the unseen power of technology, pushing boundaries to discover what lies beyond the visible horizon.</p>
-            <p>TantraFiesta continues to evolve, embracing new themes and challenges each year, while staying true to its mission of igniting curiosity and fostering innovation. As it looks to the future, the festival remains dedicated to providing a platform for students to explore, learn, and contribute to the ever-evolving landscape of technology.</p>
+            <p>The 2025 edition, themed "Dark Matter Eclipse: Exploring the Unexplored," delved deep into the mysteries of the cosmos. This year marked a rebirth of innovation, where creativity met the unseen power of technology, pushing boundaries to discover what lies beyond the visible spectrum.</p>
           </div>
         </article>
       </section>
