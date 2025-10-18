@@ -122,10 +122,12 @@ export default function SpaceSponsorCards() {
               />
             </svg>
           </div>
-          <h1 className="text-5xl font-bold text-foreground tracking-wider">SPACE SPONSORS</h1>
+          <h1 className="text-5xl font-bold text-foreground tracking-wider">Tantra Fiesta 2025</h1>
         </div>
         <p className="text-xl text-muted-foreground max-w-4xl mx-auto px-6 text-balance">
-          Discover the leading organizations and companies driving innovation in space exploration and technology.
+          TantraFiesta is the prestigious National Level Annual Technical Fest of the Indian Institute of Information Technology, Nagpur, which is back on the stage with a big bang! TantraFiesta celebrates innovation and brings enormous talent together
+        
+        TantraFiesta 2025, the flagship annual technical fest of the Indian Institute of Information Technology (IIIT) Nagpur, unfolded from October 9 to 11, 2025, under the captivating theme “Dark Matter Eclipse: Exploring the Unexplored”. This year's edition marked a significant evolution, blending innovation, creativity, and the boundless potential of technology to delve into the mysteries of the cosmos.
         </p>
       </header>
 
