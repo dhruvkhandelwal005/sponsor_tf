@@ -156,7 +156,7 @@ export default function SpaceSponsorCards() {
           <h1 className="text-5xl font-bold text-foreground tracking-wider">Tantra Fiesta 2025</h1>
         </div>
         <p className="text-xl text-muted-foreground max-w-4xl mx-auto px-6 text-balance">
-          TantraFiesta is the prestigious National Level Annual Technical Fest of the Indian Institute of Information Technology, Nagpur, which is back on the stage with a big bang! TantraFiesta celebrates innovation and brings enormous
+          TantraFiesta is the prestigious National Level Annual Technical Fest of the Indian Institute of Information Technology, Nagpur, which is back on the stage with a big bang! TantraFiesta
         
         TantraFiesta 2025, the flagship annual technical fest of the Indian Institute of Information Technology (IIIT) Nagpur, unfolded from October 9 to 11, 2025, under the captivating theme “Dark Matter Eclipse: Exploring the Unexplored”. This year's edition marked a significant evolution, blending innovation, creativity, and the boundless potential of technology to delve into the mysteries of the cosmos.
         </p>
@@ -258,6 +258,38 @@ export default function SpaceSponsorCards() {
           </div>
         </article>
       </section>
+
+      {/* Footer */}
+<footer className="w-full bg-slate-900/70 text-white mt-8">
+  <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <h3 className="text-lg font-semibold">TantraFiesta</h3>
+      <p className="text-sm text-muted-foreground mt-1">IIIT Nagpur — annual technical festival.</p>
+    </div>
+
+    <nav className="flex gap-4 text-sm text-muted-foreground">
+      <a href="#">Events</a>
+      <a href="#">Workshops</a>
+      <a href="#">Sponsors</a>
+      <a href="#">Team</a>
+    </nav>
+
+    <div className="flex items-center gap-3">
+      <form onSubmit={(e) => e.preventDefault()} className="flex gap-2">
+        <input aria-label="Email" placeholder="Email" className="px-3 py-2 rounded-md bg-white/5 text-sm outline-none focus:ring-2 focus:ring-primary" />
+        <button className="px-3 py-2 rounded-md bg-primary text-sm">Subscribe</button>
+      </form>
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="px-3 py-2 rounded-md bg-white/6 text-sm">Top</button>
+    </div>
+  </div>
+
+  <div className="border-t border-white/6">
+    <div className="max-w-6xl mx-auto px-6 py-4 text-xs text-muted-foreground flex items-center justify-between">
+      <span>© {new Date().getFullYear()} TantraFiesta · IIIT Nagpur</span>
+      <span>Built with care</span>
+    </div>
+  </div>
+</footer>
     </div>
   )
 }
