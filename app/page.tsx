@@ -151,7 +151,13 @@ export default function SpaceSponsorCards() {
             "/ixigo.png",
             "/Kazo.png",
             "/skechers.png",
-            "/trends.jpeg"
+            "/trends.jpeg",
+            // Added 5 more cards
+            "/download.jpeg",
+            "/benq.png",
+            "/lavie.jpg",
+            "/cocaCola.png",
+            "/ixigo.png",
           ].map((img, index) => (
             <div
               key={index}
